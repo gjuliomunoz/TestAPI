@@ -1,18 +1,18 @@
-//Referencia a rutas
+// Referencia a rutas
 const Router = require('koa-router');
-const router = new Router();
-
-//Referencia a controlador ussalud
+// Referencia a controlador ussalud
+/* eslint import/no-unresolved: [2, { caseSensitive: true }] */
 const usSaludController = require('./Controllers/UsuarioSalud');
 
+const router = new Router();
 
-//Ruta para consultar la salud de la aplicacion
-router.get('/health',(ctx) =>{
-    ctx.body = 'my api si alive!!';
-})
+// Ruta para consultar la salud de la aplicacion
+router.get('/health', (ctx) => {
+  ctx.body = 'my api si alive!!';
+});
 
-//Agrega las rutas del controlador
+// Agrega las rutas del controlador
 router.use(usSaludController.routes());
 
-//Expone variable hacia afuera
+// Expone variable hacia afuera
 module.exports = router;
