@@ -1,7 +1,6 @@
 const Router = require('koa-router');
 const usSaludImplementations = require('./Implementations');
 
-
 const router = new Router({
   prefix: '/users',
 });
