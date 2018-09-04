@@ -3,14 +3,12 @@ const usSaludImplementations = require('./Implementations');
 
 
 const router = new Router({
-    prefix: '/users',
-  });
+  prefix: '/users',
+});
 
-const users = [];
+router.get('/', usSaludImplementations.getUsers);
 
-router.get('/',usSaludImplementations.getUsers);
+router.post('/', usSaludImplementations.saveUser);
 
-router.post('/',usSaludImplementations.saveUser);
-
-//exponer variable router
+// exponer variable router
 module.exports = router;
