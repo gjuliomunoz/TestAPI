@@ -11,7 +11,6 @@ const app = new Koa();
 //Asignar parser y rutas
 app
 .use(bodyParser())
-.use(router.routes());
 
 //Poner el servidor en modo listen puerto 3000, e invocar asincronicamente la escritura al log;
 app.listen(3000, () =>{
